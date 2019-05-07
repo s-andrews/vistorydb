@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial';font-size: 22px;
+}
+
+/* The main divs forming the structure of the page */
+div {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#main {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 4fr
+}
+
+#filter {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: lightgrey;
+}
+
+#vistories {
+    grid-column: 1;
+    grid-row:2;
+    background-color: lightgrey;
+}
+
+#vistory {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: lightgrey;
+}
