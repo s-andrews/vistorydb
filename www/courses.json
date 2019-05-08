@@ -1,0 +1,15 @@
+[
+    {
+        "title": "Calling Peaks from Replicated ChIP Data",
+        "file": "multiple_peak_calling.html",
+        "summary": "In replicated ChIP-Seq datasets there are a few different ways to call peaks. We go through a few options for how to call peaks, explaining the differences between them and the strenghts and weaknesses of each",
+        "tags": "ngs,chip-seq,peak calling",
+        "date": "2019-05-07"
+    },
+    {
+        "title": "Annotating probes with promoters",
+        "file": "promoter_annotation.html",
+        "summary" : "One common functional annotation to a set of probes is to identify those which are in promoters.  Doing this can be tricky and there are different approaches depending on what you want to do with the results, and your exact definition of a promoter",
+        "tags": "ngs,annotation, promoter"
+    }
+]
