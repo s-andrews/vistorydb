@@ -44,7 +44,7 @@ div {
 #filterlist li {
     padding: 0.2em;
     margin-bottom: 0.2em;
-    display: block;
+    display: inline-block;
     cursor: pointer;
 }
 

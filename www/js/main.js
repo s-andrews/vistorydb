@@ -37,10 +37,58 @@ let loadVistories = function () {
         // Now set the events for when someone clicks on an ngs tag
         $("#filterlist li").click(function () {
             $(this).toggleClass("selected");
+            updateFilters();
         })
 
     })
+}
 
+
+// This is called any time a tag is changed so we can update
+// the set of vistories which are shown
+let updateFilters = function () {
+    tagList = [];
+    $("#filterlist li.selected").each(function() {  
+        tagList.push($(this).text().replace(/\(.*/,""));
+    })
+
+    console.log("Selected tags are "+tagList);
+
+    // Now we need to go through the vistories and collect all of
+    // the tags there.  We can then check them against the selected
+    // ones to show which ones match.
+
+    $("div.summary").each(function() {
+
+        // If there aren't any filters, we just show everything
+        if (tagList.length == 0) {
+            $(this).show();
+        }
+
+        else {
+            let theseTags = $(this).find("p.tags").text().split(",");
+
+            var failedTag = false;
+
+            for (var i=0;i<tagList.length;i++) {
+                tag = tagList[i];
+                if (theseTags.indexOf(tag)<0) {
+                    failedTag = true;
+                    break;
+                }
+                else {
+                    console.log("Found "+tag+" in "+theseTags);
+                }
+            }
+
+            if (failedTag) {
+                $(this).hide();
+            }
+            else {
+                $(this).show();
+            }
+        }
+    })
 
 
 }
