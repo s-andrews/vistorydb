@@ -2,7 +2,7 @@
     {
         "title": "Calling Peaks from Replicated ChIP Data",
         "file": "multiple_peak_calling.html",
-        "summary": "In replicated ChIP-Seq datasets there are a few different ways to call peaks. We go through a few options for how to call peaks, explaining the differences between them and the strenghts and weaknesses of each",
+        "summary": "In replicated ChIP-Seq datasets there are a few different ways to call peaks. We go through a few options for how to call peaks, explaining the differences between them and the strengths and weaknesses of each",
         "tags": "ngs,chip-seq,peak calling",
         "date": "2019-05-07"
     },
