@@ -24,7 +24,7 @@ let loadVistories = function () {
                     tagCounts[tags[j]] = 1;
                 }
             }
-            vistories.append('<div class="summary"><h1>'+response[i]["title"]+'</h1><p>'+response[i].summary+'</p><p class="tags">'+response[i]["tags"]+'</p></div>');
+            vistories.append('<div class="summary" data-url="vistories/'+response[i]["file"]+'"><h1>'+response[i]["title"]+'</h1><p>'+response[i].summary+'</p><p class="tags">'+response[i]["tags"]+'</p></div>');
         }
 
         // Add the tags and their respective counts to the filters section
@@ -40,7 +40,25 @@ let loadVistories = function () {
             updateFilters();
         })
 
+        // Set the events if someone clicks on a vistory
+        $(".summary").click(function() {
+            showVistory($(this));
+        })
+
     })
+}
+
+
+// This is called when someone clicks on a vistory summary
+// and we need to load it into the main iframe
+let showVistory = function (summary) {
+    // TODO: Get the actual vistory URL
+    var vistoryTarget = $("#vistorytarget");
+
+    vistoryTarget.show();
+    vistoryTarget.attr("src",summary.data("url"));
+
+
 }
 
 
@@ -101,6 +119,5 @@ let updateFilters = function () {
 $(document).ready(function () {
 
     loadVistories();
-
 
 })

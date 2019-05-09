@@ -29,8 +29,15 @@ div {
     grid-column: 2;
     grid-row-start: 1;
     grid-row-end: 3;
-    background-color: lightgrey;
 }
+
+/* The vistory iframe */
+#vistorytarget {
+    width: 100%;
+    height: 100%;
+    display: none; /* This will be shown when the first vistory is selected */
+}
+
 
 /* The filter section */
 #filterlist {
