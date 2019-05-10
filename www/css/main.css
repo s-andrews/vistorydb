@@ -31,6 +31,11 @@ div {
     grid-row-end: 3;
 }
 
+#helpcontent {
+    display:none;
+    font-size: 80%;
+}
+
 /* The vistory iframe */
 #vistorytarget {
     width: 100%;

@@ -120,4 +120,8 @@ $(document).ready(function () {
 
     loadVistories();
 
+    $("#showhelp").click(function() {
+        $("#helpcontent").slideToggle();
+    })
+
 })
