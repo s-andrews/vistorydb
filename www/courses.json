@@ -10,6 +10,15 @@
         "title": "Annotating probes with promoters",
         "file": "promoter_annotation.html",
         "summary" : "One common functional annotation to a set of probes is to identify those which are in promoters.  Doing this can be tricky and there are different approaches depending on what you want to do with the results, and your exact definition of a promoter",
-        "tags": "ngs,annotation, promoter"
+        "tags": "ngs,annotation, promoter",
+        "date": "2019-05-07"
+
+    },
+    {
+        "title": "Pairwise RNA-Seq differential expression",
+        "file": "pairwise_rnaseq_differential_expression.html",
+        "summary" : "A simple differential expression analysis between two conditions with no confounding factors. The most straight forward type of RNA-Seq analysis.  Uses DESeq2 and Intensity difference tests.",
+        "tags": "ngs,rna-seq,statistics,qc,visualisation",
+        "date": "2019-05-10"
     }
 ]
