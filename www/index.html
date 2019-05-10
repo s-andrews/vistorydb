@@ -12,9 +12,11 @@
 <body>
     <!-- This is the header at the top of the page -->
     <div id="header">
-        <h1>Vistory Database</h1>
+        <h1>Vistory DB</h1>
+        <p class="small">A collection of SeqMonk Vistory files</p>
         <button id="showhelp">About</button>
-        <div id="helpcontent">
+    </div>
+    <div id="helpcontent">
         <p>
             This is a repository of <a href="https://www.bioinformatics.babraham.ac.uk/projects/seqmonk/">SeqMonk</a> vistories.  These are 
             report documents which accurately describe an analysis perfomred within SeqMonk.
@@ -24,7 +26,6 @@
             In this system you can search through the submitted Vistories to find one which matches the analysis you are trying to perform 
             so you can replicate and adapt the techniques shown to the question you are trying to address.
         </p>
-    </div>
     </div>
 
     <!-- This is the main content div which gets restructured when the viewport changes -->
@@ -49,8 +50,8 @@
 
         <!-- This is where the selected vistory shows up -->
         <div id="vistory">
-            <h2>Vistory</h2>
 
+            <p id="initialvistory">Select a vistory on the left and it will appear here</p> 
             <iframe id="vistorytarget" src="" frameborder="0"></iframe>
 
         </div>

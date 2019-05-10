@@ -52,7 +52,9 @@ let loadVistories = function () {
 // This is called when someone clicks on a vistory summary
 // and we need to load it into the main iframe
 let showVistory = function (summary) {
-    // TODO: Get the actual vistory URL
+
+    $("#initialvistory").hide();
+    
     var vistoryTarget = $("#vistorytarget");
 
     vistoryTarget.show();
