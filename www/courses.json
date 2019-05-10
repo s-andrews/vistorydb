@@ -20,5 +20,12 @@
         "summary" : "A simple differential expression analysis between two conditions with no confounding factors. The most straight forward type of RNA-Seq analysis.  Uses DESeq2 and Intensity difference tests.",
         "tags": "ngs,rna-seq,statistics,qc,visualisation",
         "date": "2019-05-10"
+    },
+    {
+        "title": "Sex determination in RNA-Seq",
+        "file": "sex_determination_in_rna_seq.html",
+        "summary" : "Checking the sex of your samples should be a key QC step in your analysis. Here we show how to use the information in RNA-Seq data to determine the sex of the samples",
+        "tags": "ngs,rna-seq,qc",
+        "date": "2019-05-10"
     }
 ]
