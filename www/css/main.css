@@ -24,6 +24,8 @@ div {
     padding-left: 1em;
     padding-bottom: 0.5em;
     margin-bottom: 0;
+    background-image: url("../images/raw_reads.png");
+    background-size: cover;
 }
 
 #filter {
