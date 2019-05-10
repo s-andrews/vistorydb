@@ -54,7 +54,7 @@ let loadVistories = function () {
 let showVistory = function (summary) {
 
     $("#initialvistory").hide();
-    
+
     var vistoryTarget = $("#vistorytarget");
 
     vistoryTarget.show();
@@ -67,12 +67,16 @@ let showVistory = function (summary) {
 // This is called any time a tag is changed so we can update
 // the set of vistories which are shown
 let updateFilters = function () {
+
+    // See if we have a text search value
+    var textValue = $("#textsearch").val().toLowerCase();
+
     tagList = [];
     $("#filterlist li.selected").each(function() {  
         tagList.push($(this).text().replace(/\(.*/,""));
     })
 
-    console.log("Selected tags are "+tagList);
+    console.log("Selected tags are "+tagList+ "search text is "+textValue);
 
     // Now we need to go through the vistories and collect all of
     // the tags there.  We can then check them against the selected
@@ -81,7 +85,7 @@ let updateFilters = function () {
     $("div.summary").each(function() {
 
         // If there aren't any filters, we just show everything
-        if (tagList.length == 0) {
+        if (tagList.length == 0 && textValue.length == 0) {
             $(this).show();
         }
 
@@ -89,6 +93,13 @@ let updateFilters = function () {
             let theseTags = $(this).find("p.tags").text().split(",");
 
             var failedTag = false;
+
+            // Check the text search first
+            if (textValue.length > 0) {
+                if (!$(this).text().toLowerCase().includes(textValue)) {
+                    failedTag = true;
+                }
+            }
 
             for (var i=0;i<tagList.length;i++) {
                 tag = tagList[i];
@@ -124,6 +135,11 @@ $(document).ready(function () {
 
     $("#showhelp").click(function() {
         $("#helpcontent").slideToggle();
+    })
+
+    $("#textsearch").change(function () {
+        console.log("Changed");
+        updateFilters();
     })
 
 })
