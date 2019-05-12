@@ -13,7 +13,6 @@ div {
 
 #main {
     display: grid;
-    grid-gap: 1em;
     grid-template-columns: 1fr 3fr;
 }
 
@@ -81,6 +80,7 @@ div {
 h2 {
     font-size: 120%;
     text-align: center;
+    margin: 0.2em;
 }
 
 
@@ -89,16 +89,22 @@ h2 {
     list-style: none;
     font-family: monospace;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.6em;
     padding-left: 1em;
     text-align: center;
+    margin-bottom: 0.5em;
 }
 
 #filterlist li {
     padding: 0.2em;
     margin-bottom: 0.2em;
+    margin-right:0.2em;
+    padding-left: 0.5em;
+    padding-right:0.5em;
+    border-radius: 0.3em;
     display: inline-block;
     cursor: pointer;
+    background-color: #DDD;
 }
 
 #filterlist li:hover {
@@ -123,7 +129,7 @@ h2 {
 div.summary {
     padding: 0.5em;
     background-color: #EEE;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 div.summary:hover {
@@ -133,6 +139,7 @@ div.summary:hover {
 
 div.summary h1 {
     font-size: 0.8em;
+    margin: 0;
 }
 
 div.summary p {
