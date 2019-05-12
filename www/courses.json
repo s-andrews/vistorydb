@@ -27,5 +27,12 @@
         "summary" : "Checking the sex of your samples should be a key QC step in your analysis. Here we show how to use the information in RNA-Seq data to determine the sex of the samples",
         "tags": "ngs,rna-seq,qc",
         "date": "2019-05-10"
+    },
+    {
+        "title": "Using Volcano Plots to evaluate statistcal filters",
+        "file": "volcano_plots.html",
+        "summary" : "Volcano plots are a graphical way to assess the significance and amount of change in the results of a statistical test. Here we show how to draw these plots and use them to set better cutoffs for statistical filters.",
+        "tags": "statistics,visualisation",
+        "date": "2019-05-12"
     }
 ]
