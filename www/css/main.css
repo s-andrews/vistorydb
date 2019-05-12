@@ -52,6 +52,14 @@ div {
     padding: 0.5em;
 }
 
+/*  THe header */
+#header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 300%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 /* The vistory iframe */
 #vistorytarget {
     width: 100%;
