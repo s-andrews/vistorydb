@@ -42,7 +42,7 @@ let loadVistories = function () {
 
         // Set the events if someone clicks on a vistory
         $(".summary").click(function() {
-            showVistory($(this));
+            showVistory($(this).data("url"));
         })
 
     })
@@ -51,15 +51,14 @@ let loadVistories = function () {
 
 // This is called when someone clicks on a vistory summary
 // and we need to load it into the main iframe
-let showVistory = function (summary) {
+let showVistory = function (url) {
 
     $("#initialvistory").hide();
 
     var vistoryTarget = $("#vistorytarget");
 
     vistoryTarget.show();
-    vistoryTarget.attr("src",summary.data("url"));
-
+    vistoryTarget.attr("src",url);
 
 }
 
@@ -141,5 +140,18 @@ $(document).ready(function () {
         console.log("Changed");
         updateFilters();
     })
+
+
+    // See if there is a vistory specified in the 
+    // GET string which we should show initially.
+    // It should be specified with ?v=[vistory_name]
+    initialURL = window.location.search.substring(1)
+
+    if (initialURL.substring(0,2) == "v=") {
+        initialURL = initialURL.substring(2)
+        initialURL = "vistories/"+initialURL;
+        showVistory(initialURL)
+    }
+
 
 })
