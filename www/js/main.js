@@ -6,7 +6,7 @@
 let loadVistories = function () {
     // Get the JSON index file
 
-    $.get("courses.json",function(response){
+    $.get("vistories.json",function(response){
 
         let vistories = $("#vistories");
 

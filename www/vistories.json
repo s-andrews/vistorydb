@@ -34,5 +34,12 @@
         "summary" : "Volcano plots are a graphical way to assess the significance and amount of change in the results of a statistical test. Here we show how to draw these plots and use them to set better cutoffs for statistical filters.",
         "tags": "statistics,visualisation",
         "date": "2019-05-12"
+    },
+    {
+        "title": "Combining and Reporting on Multiple Statistical Tests",
+        "file": "reporting_on_multiple_lists.html",
+        "summary" : "If you use multiple statistical (or other) filters and combine them to generate your final hit list then this example shows you how to create a combined report with the details from all tests.",
+        "tags": "statistics,reporting",
+        "date": "2019-07-11"
     }
 ]
